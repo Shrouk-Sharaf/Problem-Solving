@@ -4604,7 +4604,7 @@ int main() {
         }
     }
     cout << "EASY";
-}*/
+}
 
 #include <iostream>
 #include <vector>
@@ -4629,3 +4629,121 @@ int main() {
     }
     cout << minSteps << endl;
 }
+
+// https://codeforces.com/problemset/problem/677/A
+#include <iostream>
+using namespace std;
+int main(){
+    int n, h;
+    int result = 0;
+    cin >> n >> h;
+    int arr[n];
+    for (int i = 0; i < n; ++i) {
+        cin >> arr[i];
+        if (arr[i] <= h) result++;
+        else result += 2;
+    }
+    cout << result;
+}
+
+// https://codeforces.com/problemset/problem/116/A
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    int cap = 0;
+    cin >> n;
+    int arr[n];
+    int x, y;
+    for (int i = 0; i < n; ++i) {
+        cin >> x >> y;
+        cap = cap - x;
+        cap = cap + y;
+        arr[i] = cap;
+    }
+    int maxx = arr[0];
+    for (int i = 0; i < n ; ++i){
+        if (arr[i] > maxx) maxx = arr[i];
+    }
+    cout << maxx;
+}
+
+// https://codeforces.com/problemset/problem/467/A
+#include <iostream>
+using namespace std;
+int main(){
+    int n;
+    cin >> n;
+    int res = 0;
+    int x, y;
+    for (int i = 0; i < n; ++i) {
+        cin >> x >> y;
+        if (y - x >= 2) res++;
+    }
+    cout << res;
+}
+
+//https://codeforces.com/problemset/problem/228/A
+#include <iostream>
+using namespace std;
+int main() {
+    int a, b, c, d;
+    cin >> a >> b >> c >> d;
+    int res = 4;
+    if (a == b) res--;
+    if (a == c || b == c) res--;
+    if (a == d || b == d || c == d) res--;
+    cout << 4 - res;
+}
+
+// https://codeforces.com/problemset/problem/136/A
+#include <iostream>
+#include <map>
+using namespace std;
+int main() {
+    int n, num;
+    cin >> n;
+    map<int, int> friends;
+    for (int i = 0; i < n ; ++i){
+        cin >> num;
+        friends[num] = i;
+    }
+    for (auto& pair : friends) {
+        cout << pair.second + 1 << ' ';
+    }
+}
+
+// https://codeforces.com/problemset/problem/520/A
+#include <iostream>
+#include <set>
+using namespace std;
+int main() {
+    int n;
+    cin >> n;
+    string sentence;
+    cin >> sentence;
+    if (n < 26) {
+        cout << "NO" << endl;
+        return 0;
+    }
+    else{
+        set<char> alphabets;
+        for (int i = 0; i < n; ++i) {
+            alphabets.insert(tolower(sentence[i]));
+        }
+        cout << (alphabets.size() == 26 ? "YES" : "NO") << endl;
+    }
+}
+
+//https://codeforces.com/problemset/problem/1985/A
+#include <iostream>
+using namespace std;
+int main(){
+    int n;
+    cin >> n;
+    string word1, word2;
+    for (int i = 0; i < n; ++i) {
+        cin >> word1 >> word2;
+        cout << word2[0] + word1.substr(1, 2) << " " << word1[0]+word2.substr(1, 2) << endl;
+    }
+}*/
