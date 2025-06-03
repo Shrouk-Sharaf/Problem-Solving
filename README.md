@@ -1,10 +1,5 @@
 # Problem Solving Repository
 
-![Competitive Programming](https://img.shields.io/badge/Competitive-Programming-blue)
-![CodeForces](https://img.shields.io/badge/CodeForces-Problems-orange)
-![LeetCode](https://img.shields.io/badge/LeetCode-Solutions-yellow)
-![VJudge](https://img.shields.io/badge/VJudge-Problems-green)
-
 This repository contains my solutions to various competitive programming problems from multiple platforms. The solutions are organized by platform and problem for easy reference.
 
 ## 📂 Repository Structure
