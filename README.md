@@ -2,17 +2,6 @@
 
 This repository contains my solutions to various competitive programming problems from multiple platforms. The solutions are organized by platform and problem for easy reference.
 
-## 📂 Repository Structure
-problem-solving/
-├── CodeForces/ # Solutions for CodeForces problems
-│ └── CodeForces.cpp # Main solutions file
-├── LeetCode/ # Solutions for LeetCode problems
-│ └── LeetCode.cpp # Main solutions file
-├── VJudge/ # Solutions for VJudge problems
-│ └── Vjudge.cpp # Main solutions file
-└── README.md # This file
-
-
 ## 🚀 Features
 
 - Organized solutions by platform and problem
