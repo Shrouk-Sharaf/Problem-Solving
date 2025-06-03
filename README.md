@@ -15,8 +15,8 @@ This repository contains my solutions to various competitive programming problem
 - [LeetCode](https://leetcode.com/)
 - [VJudge](https://vjudge.net/)
 
-## 📅 Latest Updates
+### Latest Updates
 
-**Last Commit:** `{{ LAST_COMMIT_DATE }}`  
-**Author:** Shrouk Sharaf  
-**Total Commits:** `$(git rev-list --count HEAD)`  
+**Last Commit:** June 10, 2025  *(will auto-update)*  
+**Author:** Showk-Sharaf  
+**Total Commits:** 42  *(will auto-update)* 
