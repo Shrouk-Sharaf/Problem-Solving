@@ -14,9 +14,3 @@ This repository contains my solutions to various competitive programming problem
 - [CodeForces](https://codeforces.com/)
 - [LeetCode](https://leetcode.com/)
 - [VJudge](https://vjudge.net/)
-
-### Latest Updates
-
-**Last Commit:** June 10, 2025    
-**Author:** Shrouk-Sharaf  
-**Total Commits:** 42  
