@@ -4746,4 +4746,110 @@ int main(){
         cin >> word1 >> word2;
         cout << word2[0] + word1.substr(1, 2) << " " << word1[0]+word2.substr(1, 2) << endl;
     }
+}
+
+//https://codeforces.com/problemset/problem/266/B
+#include <iostream>
+using namespace std;
+int main(){
+    int n, t;
+    string queue, result_queue;
+    cin >> n >> t;
+    cin >> queue;
+    result_queue = q
+    queue;
+    for (int j = 0; j < t; ++j) {
+        for (int i = 0; i < n; ++i) {
+            if(queue[i] == 'B' && queue[i+1] == 'G'){
+                swap(result_queue[i], result_queue[i+1]);
+            }
+        }
+        queue = result_queue;
+    }
+    for (int i = 0; i < n; ++i) {
+        cout << result_queue[i];
+    }
+}
+
+// https://codeforces.com/problemset/problem/469/A
+#include <iostream>
+#include <set>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    set<int> Result;
+    int p;
+    cin >> p;
+    for (int i = 0; i < p; ++i) {
+        int level;
+        cin >> level;
+        Result.insert(level);
+    }
+    int q;
+    cin >> q;
+    for (int i = 0; i < q; ++i) {
+        int level;
+        cin >> level;
+        Result.insert(level);
+    }
+    cout << (Result.size() == n? "I become the guy." : "Oh, my keyboard!");
+}
+
+// https://codeforces.com/problemset/problem/144/A
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    vector<int> heights(n);
+
+    for (int i = 0; i < n; ++i) cin >> heights[i];
+
+    int leftMax = *max_element(heights.begin(), heights.end());
+    int leftPos = 0;
+    for (int i = 0; i < n; ++i) {
+        if(leftMax == heights[i]){
+            leftPos = i;
+            break;
+        }
+    }
+
+    int rightMin = *min_element(heights.begin(), heights.end());
+    int rightPos = n - 1;
+    for (int i = n-1; i >= 0; --i) {
+        if(rightMin == heights[i]){
+            rightPos = i;
+            break;
+        }
+    }
+    int swaps = leftPos + (n - 1 - rightPos);
+    if (leftPos > rightPos) swaps--;
+    cout << swaps;
+}
+
+// https://codeforces.com/problemset/problem/96/A
+#include <iostream>
+using namespace std;
+int main() {
+    string match;
+    cin >> match;
+    int sequence = 1;
+
+    for (int i = 1; i < match.length(); ++i) {
+        if (match[i] == match[i-1]) {
+            sequence++;
+            if (sequence >= 7) {
+                cout << "YES";
+                return 0;
+            }
+        }
+        else sequence = 1;
+    }
+    cout << "NO";
 }*/
+
