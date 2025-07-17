@@ -4851,5 +4851,97 @@ int main() {
         else sequence = 1;
     }
     cout << "NO";
-}*/
+}
 
+// https://codeforces.com/problemset/problem/996/A
+#include <iostream>
+using namespace std;
+int main() {
+    int n, min_bills=0;
+    cin >> n;
+    while (n != 0){
+        if (n / 100 > 0){
+            min_bills += n / 100;
+            n = n % 100;
+        }
+        if (n / 20 > 0){
+            min_bills += n / 20;
+            n = n % 20;
+        }
+        if (n / 10 > 0){
+            min_bills += n / 10;
+            n = n % 10;
+        }
+        if (n / 5 > 0){
+            min_bills += n / 5;
+            n = n % 5;
+        }
+        if (n / 1 > 0){
+            min_bills += n / 1;
+            n = n % 1;
+        }
+    }
+    cout << min_bills;
+}
+
+// https://codeforces.com/problemset/problem/155/A
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int contests, Acontests =  0;
+    cin >> contests;
+
+    vector<int> arr(contests);
+
+    for (int i = 0; i < contests; ++i) {
+        cin >> arr[i];
+    }
+
+    int best = arr[0], worst = arr[0];
+
+    for (int i = 1; i < contests; ++i) {
+        if (arr[i] > best) {
+            Acontests++;
+            best = arr[i];
+        }
+        if (arr[i] < worst) {
+            Acontests++;
+            worst = arr[i];
+        }
+    }
+
+    cout << Acontests;
+}
+
+// https://codeforces.com/problemset/problem/1433/A
+#include <iostream>
+using namespace std;
+
+int Total(int x) {
+    string x_str = to_string(x);
+    char digit = x_str[0];
+    int press = 0;
+
+    for (char d = '1'; d <= digit; ++d) {
+        for (int i = 1; i <= 4; ++i) {
+            string apartment_str(i, d);
+            press += i;
+            if (apartment_str == x_str) {
+                return press;
+            }
+        }
+    }
+    return press;
+}
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int x;
+        cin >> x;
+        cout << Total(x) << endl;
+    }
+}*/
